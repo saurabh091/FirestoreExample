@@ -14,6 +14,7 @@
 		C2AC615C22F44B43004254D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AC615A22F44B43004254D8 /* HomeViewController.swift */; };
 		C2AC615D22F44B43004254D8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AC615B22F44B43004254D8 /* HomeViewController.xib */; };
 		C2CC04F322F459C900A230C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2CC04F222F459C900A230C3 /* GoogleService-Info.plist */; };
+		C2CC04F622F4642E00A230C3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CC04F522F4642E00A230C3 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C2AC615A22F44B43004254D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2AC615B22F44B43004254D8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		C2CC04F222F459C900A230C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C2CC04F522F4642E00A230C3 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F0EF701FF86E0C29F9B5E1EE /* Pods_FirestoreExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirestoreExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				C2AC614722F44A9F004254D8 /* AppDelegate.swift */,
+				C2CC04F422F4641500A230C3 /* Model */,
 				C2AC615922F44AF8004254D8 /* ViewController */,
 				C2AC614E22F44AA7004254D8 /* Assets.xcassets */,
 				C2AC615022F44AA8004254D8 /* LaunchScreen.storyboard */,
@@ -97,6 +100,14 @@
 				C2AC615B22F44B43004254D8 /* HomeViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C2CC04F422F4641500A230C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2CC04F522F4642E00A230C3 /* Task.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2AC614822F44A9F004254D8 /* AppDelegate.swift in Sources */,
+				C2CC04F622F4642E00A230C3 /* Task.swift in Sources */,
 				C2AC615C22F44B43004254D8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
