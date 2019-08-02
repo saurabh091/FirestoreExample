@@ -64,7 +64,11 @@ class HomeViewController: UIViewController {
     }
     
     @objc func addTapped() {
-        promptForAnswer()
+//        promptForAnswer()
+        documents("Tasks").add
+        Collection("Tasks").addDocument
+        (data: ["name": textFieldReminder.text ??
+            "empty task", "done": false])
     }
     
     func promptForAnswer() {
@@ -101,5 +105,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel!.textColor = item.done == false ? UIColor.black : UIColor.lightGray
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if (editingStyle == .delete){
+            let item = tasks[indexPath.row]
+            _ = Firestore.firestore().collection("Tasks").document(item.id).delete()
+        }
+        
     }
 }
